@@ -66,7 +66,7 @@ def save_graph_to_csv(G, dst_dir):
 
     # Save nodes list
     nodes_data = list(G.nodes.data())  # [(node_name, {attr1, attr2}),...]
-    with open(os.path.join(dst_dir, 'graph_X.csv'), 'w') as f:
+    with open(os.path.join(dst_dir, 'graph_X.csv'), 'w', encoding='utf-8') as f:
         print('node_name/poi_id,checkin_cnt,poi_catid,poi_catid_code,poi_catname,latitude,longitude', file=f)
         for each in nodes_data:
             node_name = each[0]

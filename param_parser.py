@@ -30,11 +30,11 @@ def parameter_parser():
                         help='Graph node features path')
     parser.add_argument('--data-train',
                         type=str,
-                        default='dataset/NYC/NYC_train.csv',
+                        default='dataset/NYC/NYC_train_new.csv',
                         help='Training data path')
     parser.add_argument('--data-val',
                         type=str,
-                        default='dataset/NYC/NYC_val.csv',
+                        default='dataset/NYC/NYC_val_new.csv',
                         help='Validation data path')
     parser.add_argument('--short-traj-thres',
                         type=int,
@@ -102,11 +102,11 @@ def parameter_parser():
     # Training hyper-parameters
     parser.add_argument('--batch',
                         type=int,
-                        default=20,
+                        default=64,
                         help='Batch size.')
     parser.add_argument('--epochs',
                         type=int,
-                        default=200,
+                        default=100,
                         help='Number of epochs to train.')
     parser.add_argument('--lr',
                         type=float,
